@@ -6,5 +6,7 @@ React Native App
 
 ```pod install```
 
-Open Install
+Open Xcode
+
+
 ```Run```
