@@ -25,6 +25,7 @@ import SplashScreen from 'react-native-splash-screen';
 import Splash from './components/Splash';
 import {GoogleSignin} from '@react-native-community/google-signin';
 import Orientation from 'react-native-orientation-locker';
+import AllProduct from './components/AllProduct';
 
 const App = () => {
   const [store, persistor] = configureStore();
@@ -41,7 +42,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <PersistGate persistor={persistor} loading={<Splash />}>
+      <PersistGate persistor={persistor} loading={<AllProduct />}>
         <StatusBar hidden />
         <EnhancedAppContainer />
       </PersistGate>

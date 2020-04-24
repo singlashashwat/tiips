@@ -16,13 +16,16 @@ function* getAllProduct(action) {
     });
     console.log('getAllProduct', getAllProductData);
     if (is_success === true) {
+      yield put(AllProductActions.setLoading(false));
       yield put(AllProductActions.getAllProductResponse(getAllProductData));
+     
     }
   } catch (e) {
     console.log('e', e);
     const errMsg =
       e && e.error_description ? e.error_description : 'unknown error';
     Toast.show(errMsg, Toast.LONG);
+    yield put(AllProductActions.setLoading(false));
   }
 }
 

@@ -19,7 +19,7 @@ const AppNavigator = createStackNavigator(
   },
   {
     mode: 'modal',
-    initialRouteName: ScreenNames.SplashContainer,
+    initialRouteName: ScreenNames.AllProductContainer,
     headerMode: 'none',
     transparentCard: true,
     cardStyle: {

@@ -13,7 +13,6 @@ import {
 const SplashContainer = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(AllProductActions.getAllProduct());
     navigateAndReset(ScreenNames.AllProductContainer);
     setTimeout(() => SplashScreen.hide(), 3000);
   }, [dispatch]);

@@ -9,6 +9,7 @@ import {Header} from './Header';
 import {Footer} from './Footer';
 import Text from 'react-native-text';
 import {HasItemsView} from './HasItemsView';
+import Loading from './Loading';
 
 const mainStyles = StyleSheet.create({
   container: {
@@ -33,6 +34,10 @@ const mainStyles = StyleSheet.create({
   scrollview: {
     flex: 1,
   },
+  loading: {
+    height: dimensions.height,
+    width: dimensions.width,
+  },
   text1: {
     position: 'absolute',
     color: colors.grey_dark,
@@ -52,23 +57,41 @@ const mainStyles = StyleSheet.create({
 });
 const AllProduct = ({
   title,
-  productData
+  productData,
+  loading,
+  onclickRight,
+  onclickLeft,
+  FirstINdex,
+  lastINdex,
+  count,
+  etfcount,
+  energycount
 }) => {
 return (
     <View style={mainStyles.container}> 
      <Header title={title} />
+     {loading && (
+        <Loading size={'large'} style={mainStyles.loading} />
+      )}
+
+      {!loading && ( 
     <ScrollView style={mainStyles.scrollview}
           contentContainerStyle={mainStyles.scrollContent}>
-    {productData && productData.length > 0 && productData.map((obj, i) => {
+    {productData && productData.map((obj, i) => {
               return (
                 <View style={mainStyles.container1}>
-                  <Text style={mainStyles.text1}>{obj.description}</Text>
-                  <HasItemsView data={obj.Details ? obj.Details : []} />
+                  <Text style={mainStyles.text1}>{obj.description.toUpperCase()}</Text>
+                  <HasItemsView data={obj.Details ? obj.Details : []} onclickRight={onclickRight} onclickLeft={onclickLeft} 
+                  FirstINdex={FirstINdex} lastINdex={lastINdex} count={count} 
+                  etfcount={etfcount}
+                  energycount={energycount}
+                  title = {obj.description}/>
                 </View>
               );
             })}
       
       </ScrollView> 
+      )}
       <Footer />
     </View>
   );
