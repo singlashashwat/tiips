@@ -21,7 +21,7 @@ const AllProductContainer = () => {
   var [energycount, energysetCount] = useState(0);
   var [fincount, finsetCount] = useState(0);
   var [carecount, caresetCount] = useState(0);
-  var [itcount, itCount] = useState(0);
+  var [itcount, itsetCount] = useState(0);
   var [indcount, indsetCount] = useState(0);
   var [matcount, matsetCount] = useState(0);
   var [realcount, realsetCount] = useState(0);
@@ -57,6 +57,46 @@ const onclickLeft = (title) => {
     if(energycount < 0){
       energysetCount(energycount = 0)
     }
+  } else if(title == 'Financials'){
+    finsetCount(fincount = fincount - 1)
+    if(fincount < 0){
+      finsetCount(fincount = 0)
+    }
+  } else if(title == 'Health Care'){
+    caresetCount(carecount = carecount - 1)
+    if(carecount < 0){
+      caresetCount(carecount = 0)
+    }
+  } else if(title == 'IT'){
+    itsetCount(itcount = itcount - 1)
+    if(itcount < 0){
+      itsetCount(itcount = 0)
+    }
+  } else if(title == 'Industrials'){
+    indsetCount(indcount = indcount - 1)
+    if(indcount < 0){
+      indsetCount(indcount = 0)
+    }
+  } else if(title == 'Materials'){
+    matsetCount(matcount = matcount - 1)
+    if(matcount < 0){
+      matsetCount(matcount = 0)
+    }
+  } else if(title == 'Real Estate'){
+    realsetCount(realcount = realcount - 1)
+    if(realcount < 0){
+      realsetCount(realcount = 0)
+    }
+  } else if(title == 'Telco'){
+    telcosetCount(telcocount = telcocount - 1)
+    if(telcocount < 0){
+      telcosetCount(telcocount = 0)
+    }
+  } else if(title == 'Utilities'){
+    utlsetCount(utlcount = utlcount - 1)
+    if(utlcount < 0){
+      utlsetCount(utlcount = 0)
+    }
   }
 };
 
@@ -64,12 +104,26 @@ const onclickRight = (title) => {
   console.log("title",title)
   if(title == 'Consumer Product'){
   setCount(count = count + 1)
-  FirstINdex = count,
-  lastINdex = count + 3
   } else if(title == 'ETFs'){
     etfsetCount(etfcount = etfcount + 1)
   } else if(title == 'Energy'){
     energysetCount(energycount = energycount + 1)
+  } else if(title == 'Financials'){
+    finsetCount(fincount = fincount + 1)
+  } else if(title == 'Health Care'){
+    caresetCount(carecount = carecount + 1)
+  } else if(title == 'IT'){
+    itsetCount(itcount = itcount + 1)
+  } else if(title == 'Industrials'){
+    indsetCount(indcount = indcount + 1)
+  } else if(title == 'Materials'){
+    matsetCount(matcount = matcount + 1)
+  } else if(title == 'Real Estate'){
+    realsetCount(realcount = realcount + 1)
+  } else if(title == 'Telco'){
+    telcosetCount(telcocount = telcocount + 1)
+  } else if(title == 'Utilities'){
+    utlsetCount(utlcount = utlcount + 1)
   }
 };
 
@@ -80,11 +134,17 @@ const onclickRight = (title) => {
       loading={loading}
       onclickRight={onclickRight}
       onclickLeft={onclickLeft}
-      FirstINdex= {FirstINdex}
-      lastINdex={lastINdex}
       count={count}
       etfcount={etfcount}
       energycount={energycount}
+      fincount={fincount}
+      carecount={carecount}
+      itcount={itcount}
+      indcount={indcount}
+      matcount={matcount}
+      realcount={realcount}
+      telcocount={telcocount}
+      utlcount={utlcount}
     />
   );
 };

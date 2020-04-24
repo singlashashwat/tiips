@@ -58,14 +58,42 @@ export const styles = StyleSheet.create({
 
 const scrollX = new Animated.Value(0);
 
-export const HasItemsView = ({data,onclickRight,onclickLeft,FirstINdex,lastINdex,count,etfcount,
-  energycount,title}) => {
+export const HasItemsView = ({data,onclickRight,onclickLeft,
+  count,
+  etfcount,
+  energycount,
+  fincount,
+  carecount,
+  itcount,
+  indcount,
+  matcount,
+  realcount,
+  telcocount,
+  utlcount,
+  title}) => {
+    var FirstINdex;
   if(title == 'Consumer Product'){
     FirstINdex = count
   } else if(title == 'ETFs'){
     FirstINdex = etfcount
   } else if(title == 'Energy'){
     FirstINdex = energycount
+  } else if(title == 'Financials'){
+    FirstINdex = fincount
+  } else if(title == 'Health Care'){
+    FirstINdex = carecount
+  } else if(title == 'IT'){
+    FirstINdex = itcount
+  } else if(title == 'Industrials'){
+    FirstINdex = indcount
+  } else if(title == 'Materials'){
+    FirstINdex = matcount
+  } else if(title == 'Real Estate'){
+    FirstINdex = realcount
+  } else if(title == 'Telco'){
+    FirstINdex = telcocount
+  } else if(title == 'Utilities'){
+    FirstINdex = utlcount
   }
   return (
     <View

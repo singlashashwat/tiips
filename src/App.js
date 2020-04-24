@@ -23,7 +23,6 @@ import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 import SplashScreen from 'react-native-splash-screen';
 import Splash from './components/Splash';
-import {GoogleSignin} from '@react-native-community/google-signin';
 import Orientation from 'react-native-orientation-locker';
 import AllProduct from './components/AllProduct';
 
@@ -31,12 +30,6 @@ const App = () => {
   const [store, persistor] = configureStore();
 
   useEffect(() => {
-    // GoogleSignin.configure({
-    //   webClientId:
-    //     '58002921881-29j61hu3v2n77nund1igur7ramai2dbs.apps.googleusercontent.com', // required
-    //   iosClientId:
-    //     '58002921881-e144amfefq9jlj59rdgsofmc1qj278re.apps.googleusercontent.com',
-    // });
     Orientation.lockToPortrait();
   }, []);
 

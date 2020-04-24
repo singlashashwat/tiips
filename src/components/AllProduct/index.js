@@ -61,11 +61,17 @@ const AllProduct = ({
   loading,
   onclickRight,
   onclickLeft,
-  FirstINdex,
-  lastINdex,
   count,
   etfcount,
-  energycount
+  energycount,
+  fincount,
+  carecount,
+  itcount,
+  indcount,
+  matcount,
+  realcount,
+  telcocount,
+  utlcount,
 }) => {
 return (
     <View style={mainStyles.container}> 
@@ -82,9 +88,17 @@ return (
                 <View style={mainStyles.container1}>
                   <Text style={mainStyles.text1}>{obj.description.toUpperCase()}</Text>
                   <HasItemsView data={obj.Details ? obj.Details : []} onclickRight={onclickRight} onclickLeft={onclickLeft} 
-                  FirstINdex={FirstINdex} lastINdex={lastINdex} count={count} 
+                  count={count} 
                   etfcount={etfcount}
                   energycount={energycount}
+                  fincount={fincount}
+                  carecount={carecount}
+                  itcount={itcount}
+                  indcount={indcount}
+                  matcount={matcount}
+                  realcount={realcount}
+                  telcocount={telcocount}
+                  utlcount={utlcount}
                   title = {obj.description}/>
                 </View>
               );
