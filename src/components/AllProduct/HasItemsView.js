@@ -100,7 +100,7 @@ export const HasItemsView = ({data,onclickRight,onclickLeft,
       style={{
         flex: 1,
         // height: responsive.vertical(100),
-        // width: responsive.vertical(220),
+        // width: dimensions.width,
         zIndex:1,
         marginTop: responsive.vertical(40),
         // marginLeft: responsive.vertical(25),
@@ -132,15 +132,16 @@ export const HasItemsView = ({data,onclickRight,onclickLeft,
             data.slice([FirstINdex], [FirstINdex + 3]).map((obj, i) => {
               return (
                 <View style={{
-                  marginLeft: responsive.horizontal(10),
-                  width: responsive.vertical(120),
-                  // height: responsive.vertical(150)
+                  paddingLeft: responsive.vertical(15),
+                  width: responsive.horizontal(100),
+                  height: responsive.vertical(150)
                 }}>
                   <FastImage
                     key={i}
                     style={{
-                      width: responsive.horizontal(90),
-                      height: responsive.horizontal(90),
+                      width: responsive.vertical(90),
+                      height: responsive.vertical(90),
+                      alignSelf:'center',
                       shadowColor: 'rgba(0, 0, 0, 0.25)',
                        shadowRadius: 4,
                         shadowOffset: {
@@ -166,6 +167,7 @@ export const HasItemsView = ({data,onclickRight,onclickLeft,
             })}
             <TouchableOpacity style={{
         marginTop: responsive.vertical(40),
+        marginLeft: responsive.vertical(15),
       }}
       onPress={e=>onclickRight(title)}>
             <Icon name="caretright" size={20} color={colors.grey_dark} />
