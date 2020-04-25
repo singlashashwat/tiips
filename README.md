@@ -1,12 +1,8 @@
+In project directory
 React Native App
 
-```Yarn```
+```yarn```
 
-```cd ios```
+connect the android device
 
-```pod install```
-
-Open Xcode
-
-
-```Run```
+```npx react-native run-android```
