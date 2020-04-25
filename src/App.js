@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <PersistGate persistor={persistor} loading={<AllProduct />}>
+      <PersistGate persistor={persistor} loading={<Splash />}>
         <StatusBar hidden />
         <EnhancedAppContainer />
       </PersistGate>

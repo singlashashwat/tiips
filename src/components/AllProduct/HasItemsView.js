@@ -134,8 +134,20 @@ export const HasItemsView = ({data,onclickRight,onclickLeft,
                 <View style={{
                   paddingLeft: responsive.vertical(15),
                   width: responsive.horizontal(100),
-                  height: responsive.vertical(150)
+                  height: responsive.vertical(150),
                 }}>
+                  <View
+                  elevation={15} style={{
+                      width: responsive.vertical(90),
+                      height: responsive.vertical(90),
+                      alignSelf:'center',
+                      shadowOffset: { width: 10, height: 10 },  
+                      shadowColor: 'black',  
+                      shadowOpacity: 1,  
+                      elevation: 3,  
+                      zIndex:999,  
+                      backgroundColor: "#0072D8"
+                    }}>
                   <FastImage
                     key={i}
                     style={{
@@ -149,10 +161,12 @@ export const HasItemsView = ({data,onclickRight,onclickLeft,
                           height: 3,
                         },
                        shadowOpacity: 1.0,
+                       elevation: 10,
                     }}
                     source={{uri:  'https://demo-api.bigmind.io/v1/products/logos/' + obj.product_id}}
                     resizeMode={FastImage.resizeMode.contain}
                   />
+                  </View>
                   <Text style={styles.text1}>{obj.name}</Text>
                   <View style={styles.contain}>
                     <View>
