@@ -146,7 +146,7 @@ export const HasItemsView = ({data,onclickRight,onclickLeft,
                       shadowOpacity: 1,  
                       elevation: 3,  
                       zIndex:999,  
-                      backgroundColor: "#0072D8"
+                      backgroundColor: "#b4b8ad"
                     }}>
                   <FastImage
                     key={i}
