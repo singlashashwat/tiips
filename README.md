@@ -1,5 +1,5 @@
 In project directory
-React Native App
+React Native Mobile App
 
 ```yarn```
 
